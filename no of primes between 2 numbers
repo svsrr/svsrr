@@ -1,0 +1,52 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[] ) throws Exception {
+
+	//Write code here
+Scanner sc = new Scanner(System.in); 
+        // Declare the variables 
+        int a, b, i, j, flag,count; 
+  count=0;
+        // Ask user to enter lower value of interval 
+        
+        a = sc.nextInt(); // Take input 
+  
+        // Ask user to enter upper value of interval 
+       
+        b = sc.nextInt(); // Take input 
+  
+        // Print display message 
+        
+  
+        // Traverse each number in the interval 
+        // with the help of for loop 
+        for (i = a; i <= b; i++) { 
+  
+            // Skip 0 and 1 as they are 
+            // niether prime nor composite 
+            if (i == 1 || i == 0) 
+                continue; 
+  
+            // flag variable to tell 
+            // if i is prime or not 
+            flag = 1; 
+  
+            for (j = 2; j <= i / 2; ++j) { 
+                if (i % j == 0) { 
+                    flag = 0; 
+                    break; 
+                }
+                
+            } 
+  if (flag == 1) 
+                count++; 
+            // flag = 1 means i is prime 
+            // and flag = 0 means i is not prime 
+            
+                 
+        } 
+ System.out.print(count);  }
+}
