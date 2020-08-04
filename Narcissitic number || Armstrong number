@@ -1,0 +1,33 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[] ) throws Exception {
+
+	//Write code here
+   int orig,pow=0,a,b,sum=0,rem;
+   Scanner s= new Scanner(System.in);
+   orig=s.nextInt();
+   a=orig;
+   b=orig;
+   //to calculte no of digits power
+ while ((int)a%10!=0){
+pow++;
+a=(int)a/10;
+ }
+ //System.out.println(pow+" this is power");
+ 
+ // to check sum for narc.. number
+ while ((int)b%10!=0){
+    rem=b%10;
+    //System.out.println(rem+" this is remainder");
+    sum+=Math.pow(rem,pow);
+    b=(int)(b/10);
+    //System.out.println(sum+" this is sum inside");
+ }
+ if (sum==orig){System.out.print("True");}
+ else {System.out.print("False");}
+
+   }
+}
