@@ -1,0 +1,32 @@
+/* Read input from STDIN. Print your output to STDOUT*/
+
+import java.io.*;
+import java.util.*;
+public class CandidateCode {
+   public static void main(String args[] ) throws Exception {
+
+	//Write code here
+Scanner sc=new Scanner (System.in);
+String str=sc.nextLine();
+int n=str.length();
+
+int u=0,s=0;
+for (int i=0;i<=n;i++){
+   char ch=str.charAt(i);
+  
+   if (ch>='A'&&ch<='Z')
+   {
+   u++;
+      }
+         else if(ch>='a'&&ch<='z')
+   {
+   s++;}
+   
+      else {};
+   if(i==n-1){
+  System.out.println(u);
+System.out.print(s);}
+}
+
+   }
+}
