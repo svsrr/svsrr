@@ -6,7 +6,7 @@ public class CandidateCode {
    public static void main(String args[] ) throws Exception {
 
 	//Write code here
-   int a,ans=1;
+   int a,ans=1,ansf=1;
    Scanner s= new Scanner(System.in);
    a=s.nextInt();
    int arr[]=new int[a];
@@ -15,13 +15,23 @@ public class CandidateCode {
    }
    for (int b=0;b<a;b++){
       if (arr[ans]>=arr[b]){
-         //System.out.println(b);
+        
          ans=ans;
       }
       else {ans=b;}
-      if (b==a-1){
-         System.out.print(arr[ans-1]);}
-   }
-//System.out.print(arr[ans-1]);
+      
+      }
+   
+   for (int c=0;c<a;c++){
+      if (c==ans){continue;}
+      else if (arr[ansf]>=arr[c]){
+         
+         ansf=ansf;
+      }
+      else {ansf=c;}
+     
+      }
+   
+System.out.print(arr[ansf]);
    }
 }
